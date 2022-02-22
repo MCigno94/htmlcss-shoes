@@ -5,31 +5,36 @@
     font-family: 'Rubik Mono One', sans-serif;
 }
 
-nav a {
-    text-decoration: none;
-    background-color: white;
-    padding: 1rem;
-    display: inline-block;
-    border-radius: 50%;
-}
-
 img {
     max-width: 100%;
+}
+
+/* variables
+*************/
+
+:root {
+    --first_section-color: red;
+    --second_section-color: green;
+    --third_section-color: yellow;
+    --relevant_text-color: yellow;
+    --secondary_text-color: green;
+    --button_text-color: black;
+    --bk_button-color: white;
 }
 
 /* utilities
 *************/
 
 .red {
-    background-color: red;
+    background-color: var(--first_section-color);
 }
 
 .green {
-    background-color: green ;
+    background-color: var(--second_section-color) ;
 }
 
 .yellow {
-    background-color: yellow;
+    background-color: var(--third_section-color);
 }
 
 /* main
@@ -39,24 +44,26 @@ img {
     position: sticky;
     z-index: 1000;
     right: 0;
-    top: 10px;
+    top: 20px;
     float: right;
 }
 
 .button_select div {
     display: inline-block;
-    margin: 0 10px;
-    
+    margin: 0 15px;    
 }
 
 .button_select a {
     width: 40px;
     height: 40px;
-    line-height: 10px;
-    box-shadow: 2px 2px 20px 2px black;
-    color: black;
+    display: inline-block;
+    text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
-
+    color: var(--button_text-color);
+    background-color: var(--bk_button-color);
+    line-height: 40px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 20px 2px black;
 }
 
 .container {
@@ -85,9 +92,9 @@ img {
 
 .red > .item,
 .green > .item {
-    color: yellow;
+    color: var(--relevant_text-color);
 }
 
 .yellow > .item {
-    color: green;
+    color: var(--secondary_text-color);
 }
