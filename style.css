@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+
+}
+
+img {
+    max-width: 100%;
+}
+
+/* utilities
+*************/
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green ;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+/* main
+********/
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.model_shoes {
+    height: 100vh;
+    position: relative;
+}
+
+.red > .item,
+.green > .item {
+    color: yellow;
+}
+
+.yellow > .item {
+    color: green;
+}
+
+.item {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
